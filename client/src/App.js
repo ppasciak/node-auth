@@ -1,4 +1,6 @@
 import StartingPage from "./components/StartingPage/StartingPage";
+import './styles/variables.css';
+import styles from './styles/global.module.css';
 import Layout from "./components/Layout/Layout";
 import LogoutPage from "./components/LogoutPage/LogoutPage";
 import LoginPage from "./components/LoginPage/LoginPage";
@@ -24,7 +26,7 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.appWrapper}>
       <RouterProvider router={router}>
         <Layout />
       </RouterProvider>

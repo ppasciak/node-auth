@@ -1,0 +1,23 @@
+:root {
+    --grey-900: #111;
+    --grey-850: #222;
+    --grey-800: #333;
+    --grey-700: #666;
+    --grey-600: #999;
+    --grey-500: #a2a2a2;
+    --grey-400: #bbb;
+    --grey-300: #ccc;
+    --grey-200: #eee;
+    --grey-100: #efefef;
+
+    --black: #000;
+    --white: #fff;
+
+    --purple-700: #4d258f;
+    --purple-500: #764abc;
+    --purple-300: #8d66cc;
+
+    --dark-bg: var(--grey-850);
+    --light-bg: var(--grey-100);
+    --primary: var(--purple-500);
+}

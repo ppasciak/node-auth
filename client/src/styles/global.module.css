@@ -1,0 +1,30 @@
+:global(body) {
+    background: var(--white);
+}
+
+:global(a) {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.appWrapper {
+    background: var(--light-bg);
+    width: 100%;
+    min-height: 100vh;
+    max-width: 506px;
+    margin: 0 auto;
+}
+
+@media (prefers-color-scheme: dark) {
+    .appWrapper {
+        background: var(--grey-800);
+    }
+
+    :global(body) {
+        background: var(--dark-bg);
+    }
+
+    :global(html) {
+        color: var(--grey-100);
+    }
+}

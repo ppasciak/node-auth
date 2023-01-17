@@ -1,3 +1,4 @@
 db
 api/node_modules
 clien/node_modules
+*.rest
