@@ -1,18 +1,15 @@
-const mysql = require('mysql');
+const { Sequelize } = require('sequelize');
+const config = require('./db.config.js');
 
-const db = mysql.createConnection({
-  host: 'db',
-  user: 'root',
-  password: 'root',
-  database: 'node_db'
-});
+const sequelize = new Sequelize(...config);
 
-db.connect((err) => {
-  if (err) throw err;
+const modelDefiners = [
+	require('../models/userModel'),
+	require('../models/refreshTokenModel')
+];
 
-  console.log('connected');
-  db.query('SELECT * FROM user', (err, result) => {
-    if (err) throw err;
-    console.log(result);
-  });
-});
+for (const modelDefiner of modelDefiners) {
+	modelDefiner(sequelize);
+}
+
+module.exports = sequelize;
