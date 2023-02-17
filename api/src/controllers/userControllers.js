@@ -134,7 +134,7 @@ const logoutUser = async (req, res) => {
 
 const createAccessToken = (user) => {
     return jwt.sign({ name: user.name }, process.env.JWT_KEY, {
-        expiresIn: "15m",
+        expiresIn: process.env.JWT_EXP_TIME,
     });
 };
 

@@ -5,7 +5,8 @@ const sequelize = new Sequelize(...config);
 
 const modelDefiners = [
 	require('../models/userModel'),
-	require('../models/refreshTokenModel')
+	require('../models/refreshTokenModel'),
+	require('../models/noteModel'),
 ];
 
 for (const modelDefiner of modelDefiners) {

@@ -9,7 +9,6 @@ const verifyToken = (req, res, next) => {
     jwt.verify(token, process.env.JWT_KEY, (err, user) => {
         console.log(err);
         if (err) return res.sendStatus(403);
-        console.log('usr in req', user);
         req.user = user;
         next();
     });
